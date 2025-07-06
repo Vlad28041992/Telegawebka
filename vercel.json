@@ -2,13 +2,13 @@
   "version": 2,
   "builds": [
     {
-      "src": "api.py",  // Путь до Flask приложения (в папке с ботом)
-      "use": "@vercel/python"
+      "src": "api.py",  // Путь до твоего Flask приложения
+      "use": "@vercel/python"  // Используем Python для деплоя
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
+      "src": "/api/(.*)",  // Все запросы к /api идут в api.py
       "dest": "api.py"
     }
   ]
